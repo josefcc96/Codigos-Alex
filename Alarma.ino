@@ -157,7 +157,7 @@ void loop() {
     Serial.write(f);
     o += f;
     int in = o.indexOf("+CLIP: \"");
-    if (in > 0 && !nume) {
+    if (in > 0 ) {
       o = "";
       for (int i = 0; i < 10; i++) {
         char f = mySerial.read();
@@ -179,7 +179,6 @@ void loop() {
           celular(i);
         }
       }
-      nume = 1;
 
     }
   }
